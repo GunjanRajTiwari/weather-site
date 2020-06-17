@@ -9,9 +9,15 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location', undefined)
         } else {
             callback(undefined,{
+                type: body.current.weather[0].main,
+                description: body.current.weather[0].description,
                 temp: body.current.temp,
                 minTemp: body.daily[0].temp.min,
                 maxTemp: body.daily[0].temp.max,
+                pressure: body.current.pressure,
+                humidity: body.current.humidity,
+                clouds: body.current.clouds,
+                dew: body.current.dew_point,
             })
         }
     })
