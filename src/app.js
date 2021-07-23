@@ -34,8 +34,8 @@ app.get("/about", (req, res) => {
 
 app.get("/help", (req, res) => {
 	res.render("help", {
-		title: "Help Message",
-		message: "This is a help message.",
+		title: "Help",
+		message: "For any help you can mail me at: roarout20@gmail.com",
 		name: "Gunjan Raj Tiwari",
 	});
 });
